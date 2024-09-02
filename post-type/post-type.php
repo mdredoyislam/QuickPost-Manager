@@ -1,0 +1,178 @@
+<?php
+add_action( 'init', function() {
+	register_post_type( 'project', array(
+		'labels' => array(
+			'name' => 'Projects',
+			'singular_name' => 'Project',
+			'menu_name' => 'Projects',
+			'all_items' => 'All Projects',
+			'edit_item' => 'Edit Project',
+			'view_item' => 'View Project',
+			'view_items' => 'View Projects',
+			'add_new_item' => 'Add New Project',
+			'add_new' => 'Add New Project',
+			'new_item' => 'New Project',
+			'parent_item_colon' => 'Parent Project:',
+			'search_items' => 'Search Projects',
+			'not_found' => 'No projects found',
+			'not_found_in_trash' => 'No projects found in Trash',
+			'archives' => 'Project Archives',
+			'attributes' => 'Project Attributes',
+			'featured_image' => 'Projects Feature',
+			'set_featured_image' => 'Set Projects Feature',
+			'remove_featured_image' => 'Remove Projects Feature',
+			'use_featured_image' => 'Use Projects Feature',
+			'insert_into_item' => 'Insert into project',
+			'uploaded_to_this_item' => 'Uploaded to this project',
+			'filter_items_list' => 'Filter projects list',
+			'filter_by_date' => 'Filter projects by date',
+			'items_list_navigation' => 'Projects list navigation',
+			'items_list' => 'Projects list',
+			'item_published' => 'Project published.',
+			'item_published_privately' => 'Project published privately.',
+			'item_reverted_to_draft' => 'Project reverted to draft.',
+			'item_scheduled' => 'Project scheduled.',
+			'item_updated' => 'Project updated.',
+			'item_link' => 'Project Link',
+			'item_link_description' => 'A link to a project.',
+		),
+		'public' => true,
+		'hierarchical' => true,
+		'exclude_from_search' => true,
+		'show_in_rest' => true,
+		'menu_position' => 5,
+		'menu_icon' => DVCORE_ASSETS_ADMIN_IMG_DIR . 'favicon.png',
+		'supports' => array(
+			0 => 'title',
+			1 => 'editor',
+			2 => 'excerpt',
+			3 => 'thumbnail',
+		),
+		'taxonomies' => array(
+			0 => 'post_format',
+		),
+		'has_archive' => 'project',
+		'rewrite' => array(
+			'feeds' => false,
+		),
+		'delete_with_user' => false,
+	) );
+
+		register_post_type( 'service', array(
+		'labels' => array(
+			'name' => 'Services',
+			'singular_name' => 'Service',
+			'menu_name' => 'Services',
+			'all_items' => 'All Services',
+			'edit_item' => 'Edit Service',
+			'view_item' => 'View Service',
+			'view_items' => 'View Services',
+			'add_new_item' => 'Add New Service',
+			'add_new' => 'Add New Service',
+			'new_item' => 'New Service',
+			'parent_item_colon' => 'Parent Service:',
+			'search_items' => 'Search Services',
+			'not_found' => 'No services found',
+			'not_found_in_trash' => 'No services found in Trash',
+			'archives' => 'Service Archives',
+			'attributes' => 'Service Attributes',
+			'featured_image' => 'Services Image',
+			'set_featured_image' => 'Set Services Image',
+			'remove_featured_image' => 'Remove Services Image',
+			'use_featured_image' => 'Use as Services Image',
+			'insert_into_item' => 'Insert into service',
+			'uploaded_to_this_item' => 'Uploaded to this service',
+			'filter_items_list' => 'Filter services list',
+			'filter_by_date' => 'Filter services by date',
+			'items_list_navigation' => 'Services list navigation',
+			'items_list' => 'Services list',
+			'item_published' => 'Service published.',
+			'item_published_privately' => 'Service published privately.',
+			'item_reverted_to_draft' => 'Service reverted to draft.',
+			'item_scheduled' => 'Service scheduled.',
+			'item_updated' => 'Service updated.',
+			'item_link' => 'Service Link',
+			'item_link_description' => 'A link to a service.',
+		),
+		'public' => true,
+		'hierarchical' => true,
+		'show_in_rest' => true,
+		'menu_position' => 5,
+		'menu_icon' => DVCORE_ASSETS_ADMIN_IMG_DIR . 'favicon.png',
+		'supports' => array(
+			0 => 'title',
+			1 => 'editor',
+			2 => 'thumbnail',
+		),
+		'taxonomies' => array(
+			0 => 'post_format',
+		),
+		'has_archive' => 'service',
+		'rewrite' => array(
+			'feeds' => false,
+		),
+		'delete_with_user' => false,
+	) );
+
+		register_post_type( 'teatimonial', array(
+		'labels' => array(
+			'name' => 'Teatimonials',
+			'singular_name' => 'Teatimonial',
+			'menu_name' => 'Teatimonials',
+			'all_items' => 'All Teatimonials',
+			'edit_item' => 'Edit Teatimonial',
+			'view_item' => 'View Teatimonial',
+			'view_items' => 'View Teatimonials',
+			'add_new_item' => 'Add New Teatimonial',
+			'add_new' => 'Add New Teatimonial',
+			'new_item' => 'New Teatimonial',
+			'parent_item_colon' => 'Parent Teatimonial:',
+			'search_items' => 'Search Teatimonials',
+			'not_found' => 'No teatimonials found',
+			'not_found_in_trash' => 'No teatimonials found in Trash',
+			'archives' => 'Teatimonial Archives',
+			'attributes' => 'Teatimonial Attributes',
+			'featured_image' => 'Profile Image',
+			'set_featured_image' => 'Set Profile Image',
+			'remove_featured_image' => 'Remove Profile Image',
+			'use_featured_image' => 'Use as Profile Image',
+			'insert_into_item' => 'Insert into teatimonial',
+			'uploaded_to_this_item' => 'Uploaded to this teatimonial',
+			'filter_items_list' => 'Filter teatimonials list',
+			'filter_by_date' => 'Filter teatimonials by date',
+			'items_list_navigation' => 'Teatimonials list navigation',
+			'items_list' => 'Teatimonials list',
+			'item_published' => 'Teatimonial published.',
+			'item_published_privately' => 'Teatimonial published privately.',
+			'item_reverted_to_draft' => 'Teatimonial reverted to draft.',
+			'item_scheduled' => 'Teatimonial scheduled.',
+			'item_updated' => 'Teatimonial updated.',
+			'item_link' => 'Teatimonial Link',
+			'item_link_description' => 'A link to a teatimonial.',
+		),
+		'public' => true,
+		'hierarchical' => true,
+		'show_in_rest' => true,
+		'menu_position' => 5,
+		'menu_icon' => DVCORE_ASSETS_ADMIN_IMG_DIR . 'favicon.png',
+		'supports' => array(
+			0 => 'title',
+			1 => 'editor',
+			2 => 'thumbnail',
+		),
+		'delete_with_user' => false,
+	) );
+} );
+
+add_filter( 'enter_title_here', function( $default, $post ) {
+	switch ( $post->post_type ) {
+		case 'project':
+			return 'Project Title';
+		case 'service':
+			return 'Services Title';
+		case 'teatimonial':
+			return 'Client Name';
+	}
+
+	return $default;
+}, 10, 2 );

@@ -1,0 +1,68 @@
+<?php
+add_action( 'init', function() {
+		register_taxonomy( 'project-tag', array(
+		0 => 'project',
+	), array(
+		'labels' => array(
+			'name' => 'Project Tags',
+			'singular_name' => 'Project Tag',
+			'menu_name' => 'Project Tags',
+			'all_items' => 'All Project Tags',
+			'edit_item' => 'Edit Project Tag',
+			'view_item' => 'View Project Tag',
+			'update_item' => 'Update Project Tag',
+			'add_new_item' => 'Add New Project Tag',
+			'new_item_name' => 'New Project Tag Name',
+			'search_items' => 'Search Project Tags',
+			'popular_items' => 'Popular Project Tags',
+			'separate_items_with_commas' => 'Separate project tags with commas',
+			'add_or_remove_items' => 'Add or remove project tags',
+			'choose_from_most_used' => 'Choose from the most used project tags',
+			'not_found' => 'No project tags found',
+			'no_terms' => 'No project tags',
+			'items_list_navigation' => 'Project Tags list navigation',
+			'items_list' => 'Project Tags list',
+			'back_to_items' => '← Go to project tags',
+			'item_link' => 'Project Tag Link',
+			'item_link_description' => 'A link to a project tag',
+		),
+		'public' => true,
+		'show_in_menu' => true,
+		'show_in_rest' => true,
+		'show_admin_column' => true,
+	) );
+
+		register_taxonomy( 'project-type', array(
+		0 => 'project',
+	), array(
+		'labels' => array(
+			'name' => 'Project Type',
+			'singular_name' => 'Project Type',
+			'menu_name' => 'Project Type',
+			'all_items' => 'All Project Type',
+			'edit_item' => 'Edit Project Type',
+			'view_item' => 'View Project Type',
+			'update_item' => 'Update Project Type',
+			'add_new_item' => 'Add New Project Type',
+			'new_item_name' => 'New Project Type Name',
+			'parent_item' => 'Parent Project Type',
+			'parent_item_colon' => 'Parent Project Type:',
+			'search_items' => 'Search Project Type',
+			'not_found' => 'No project type found',
+			'no_terms' => 'No project type',
+			'filter_by_item' => 'Filter by project type',
+			'items_list_navigation' => 'Project Type list navigation',
+			'items_list' => 'Project Type list',
+			'back_to_items' => '← Go to project type',
+			'item_link' => 'Project Type Link',
+			'item_link_description' => 'A link to a project type',
+		),
+		'public' => true,
+		'hierarchical' => true,
+		'show_in_menu' => true,
+		'show_in_rest' => true,
+		'show_tagcloud' => false,
+		'show_admin_column' => true,
+		'sort' => true,
+	) );
+} );

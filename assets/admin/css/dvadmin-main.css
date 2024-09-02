@@ -1,0 +1,22 @@
+.wp-menu-image img {
+    width: 20px;
+}
+.projectFeature img, .service-feature, .post-feature {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.profile-image {
+    border-radius: 50%;
+}
+
+.dv-post-cointer-list li a {
+    font-family: "DM Sans", Sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-style: normal;
+    line-height: 2em;
+    display: block;
+}
